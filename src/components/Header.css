@@ -1,0 +1,31 @@
+/* Conteneur principal du Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Largeur maximale définie par la maquette Figma */
+    max-width: 1240px;
+
+    /* Centre le Header horizontalement dans la page */
+    margin: 30px auto 0;
+}
+
+/* Taille du logo Kasa */
+.header-logo {
+    width: 120px;
+    height: auto;
+}
+
+/* Organisation des liens de navigation */
+.header-nav {
+    display: flex;
+    gap: 57px;
+}
+
+/* Style des liens de navigation */
+.header-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}

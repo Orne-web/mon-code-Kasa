@@ -1,4 +1,7 @@
-// Importe les outils nécessaires pour gérer les routes
+ // Importe le Header commun aux différentes pages
+import Header from "../components/Header";
+ 
+ // Importe les outils nécessaires pour gérer les routes
 import { BrowserRouter, Routes, Route } from "react-router";
 
 // Importe les pages de l'application
@@ -12,7 +15,7 @@ function AppRouter() {
 
     return (
         <BrowserRouter>
-
+            <Header />
             {/* Regroupe toutes les routes */}
             <Routes>
 

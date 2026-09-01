@@ -1,0 +1,58 @@
+
+/* Conteneur principal de la bannière */
+.banner {
+    max-width: 1240px;
+    height: 223px;
+    /* 50px entre le Header et la bannière, selon la maquette Figma */
+    margin: 40px auto 0;
+
+    /* Arrondit les coins de la bannière */
+    border-radius: 25px;
+
+    /* Empêche l'image de dépasser des coins arrondis */
+    overflow: hidden;
+    /*permet de positionner le texte par dessus l'image */
+    position: relative;
+}
+
+/* Voile sombre au-dessus de l'image pour améliorer la lisibilité du texte */
+.banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* Texte affiché par-dessus l'image */
+.banner-title {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+
+    /* Dimensions du bloc texte indiquées dans Figma */
+    width: 733px;
+
+    /* Empêche le texte de passer sur plusieurs lignes */
+    white-space: nowrap;
+
+    /* Typographie de la maquette */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 143%;
+    letter-spacing: 0;
+
+    color: white;
+    text-align: center;
+}
+/* Image de la bannière */
+.banner-image {
+    width: 100%;
+    height: 100%;
+
+    /* Recadre l'image sans la déformer */
+    object-fit: cover;
+}
