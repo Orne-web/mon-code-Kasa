@@ -13,6 +13,9 @@
     overflow: hidden;
     /*permet de positionner le texte par dessus l'image */
     position: relative;
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+
 }
 
 /* Voile sombre au-dessus de l'image pour améliorer la lisibilité du texte */

@@ -1,17 +1,51 @@
-// Importe le composant Banner pour l'afficher sur la page d'accueil
+// Importe useEffect et useState depuis React
+import { useEffect, useState } from "react";
+
+// Importe la bannière
 import Banner from "../components/Banner";
 
-// Composant React correspondant à la page d'accueil de Kasa
+// Importe le composant Card
+import Card from "../components/Card";
+
 function Home() {
 
-    // return définit ce que le composant doit afficher
+    // Stocke la liste des logements récupérés depuis l'API
+    const [logements, setLogements] = useState([]);
+
+    // useEffect permet d'exécuter le fetch au chargement de la page
+    useEffect(() => {
+
+        fetch("http://localhost:8080/api/properties")
+            .then((response) => response.json())
+            .then((data) => {
+                setLogements(data);
+            })
+            .catch((error) => {
+                console.error("Erreur lors du chargement des logements :", error);
+            });
+
+    }, []);
+
     return (
         <main>
-            {/* Affiche la bannière de la page d'accueil */}
-             <Banner />
+
+            {/* Affiche la bannière */}
+            <Banner />
+
+            {/* Affiche une carte pour chaque logement */}
+            <section className="housing-grid">
+                {logements.map((logement) => (
+                    <Card
+                        key={logement.id}
+                        title={logement.title}
+                        cover={logement.cover}
+                        id={logement.id}
+                    />
+                ))}
+            </section>
+
         </main>
     );
 }
 
-// Permet d'utiliser le composant Home dans un autre fichier
 export default Home;

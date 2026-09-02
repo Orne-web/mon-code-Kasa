@@ -1,0 +1,60 @@
+/* Conteneur d'une carte de logement */
+.card {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Image du logement */
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Titre affiché sur l'image */
+.card-title {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    margin: 0;
+
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    z-index: 1;
+}
+
+/* Conteneur qui organise les cartes de logements */
+.housing-grid {
+    max-width: 1240px;
+    margin: 40px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 60px;
+    row-gap: 50px;
+
+    padding: 56px 50px;
+    box-sizing: border-box;
+}
+
+/* Ajoute un dégradé sombre sur l'image pour rendre le titre lisible */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 60%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+}
+/* Supprime le style par défaut du lien autour de la Card */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
