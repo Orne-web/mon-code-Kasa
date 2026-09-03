@@ -1,0 +1,40 @@
+/* Barre du Collapse */
+.collapse-header {
+    width: 582px;
+    height: 38px;
+
+    padding: 10px 20px 10px 10px;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    background-color: #FF6060;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Titre du Collapse */
+.collapse-title {
+    color: white;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+/* Bouton contenant la flèche du Collapse */
+.collapse-button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+    border: none;
+    color: white;
+
+    font-size: 24px;
+    cursor: pointer;
+}

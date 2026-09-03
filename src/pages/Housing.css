@@ -4,3 +4,116 @@
     max-width: 1240px;
     margin: 0 auto;
 }
+/* Titre principal du logement */
+.housing-title {
+    
+    margin: 20px 0 0;
+
+    color: #FF6060;
+    font-family: "Montserrat", Arial, sans-serif;
+    letter-spacing: 0;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 51px;
+}
+/* Localisation du logement */
+.housing-location {
+    
+    margin: 0;
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 143%;
+    letter-spacing: 0;
+}
+/* Conteneur des tags */
+.housing-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Style d'un tag */
+.housing-tag {
+    min-width: 115px;
+    height: 25px;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FF6060;
+    color: white;
+    border-radius: 10px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+/* Photo du propriétaire */
+.housing-host-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* Bloc contenant le nom et la photo du propriétaire */
+.housing-host {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+
+}
+
+/* Nom du propriétaire */
+.housing-host-name {
+    width: 93px;
+    margin: 0;
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 143%;
+    letter-spacing: 0;
+    text-align: right;
+    color: #FF6060;
+}
+
+/* Ligne contenant les informations du logement et le propriétaire */
+.housing-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* Conteneur des étoiles */
+.housing-rating {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+/* Taille des étoiles */
+.star {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+/* Étoile correspondant à la note */
+.star-active {
+    color: #FF6060;
+}
+
+/* Étoile restante */
+.star-inactive {
+    color: #E3E3E3;
+}
+/* Conteneur des blocs Description et Équipements */
+.housing-collapses {
+    margin-top: 20px;
+}

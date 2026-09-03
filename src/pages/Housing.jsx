@@ -1,3 +1,5 @@
+import Collapse from "../components/Collapse";
+
 // Importe les styles de la fiche logement
 import "./Housing.css";
 
@@ -43,12 +45,71 @@ useEffect(() => {
                       title={logement.title}
                   />
         
-                    <h1>{logement.title}</h1>
+                    {/* Informations principales du logement */}
+       <div className="housing-info">
+
+         {/* Partie gauche : titre, localisation et tags */}
+       <div className="housing-info-left">
+    <h1 className="housing-title">
+        {logement.title}
+    </h1>
+
+    <p className="housing-location">
+        {logement.location}
+    </p>
+
+    {/* Liste des tags du logement */}
+    <div className="housing-tags">
+        {logement.tags.map((tag) => (
+            <span className="housing-tag" key={tag}>
+                {tag}
+            </span>
+        ))}
+    </div>
+</div>
+
+      {/* Partie droite : propriétaire et notation */}
+<div className="housing-info-right">
+
+{/* Informations sur le propriétaire */}
+<div className="housing-host">
+    <p className="housing-host-name">
+        {logement.host.name}
+    </p>
+
+    <img
+        className="housing-host-picture"
+        src={logement.host.picture}
+        alt={logement.host.name}
+    />
+</div>
+
+      {/* Note du logement */}
+     <div className="housing-rating">
+    {[1, 2, 3, 4, 5].map((star) => (
+        <span
+            key={star}
+            className={
+                star <= Number(logement.rating)
+                    ? "star star-active"
+                    : "star star-inactive"
+            }
+        >
+            ★
+        </span>
+    ))}
+</div>
+
+</div>
+     </div>
     
-                    <p>{logement.location}</p>
-    
-                    <p>{logement.description}</p>
-                </>
+                   {/* Bloc Description */}
+          <div className="housing-collapses">
+             <Collapse title="Description">
+             <p>{logement.description}</p>
+             </Collapse>
+ </div>
+                 </>
             )}
 
         </main>
