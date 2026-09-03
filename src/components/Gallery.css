@@ -1,0 +1,56 @@
+/* Conteneur principal de la galerie */
+.gallery {
+    position: relative;
+    width: 100%;
+    height: 415px;
+    margin: 40px auto 0;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+/* Image affichée dans la galerie */
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Style commun aux deux boutons de navigation */
+.gallery-previous,
+.gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 80px;
+
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Flèche précédente placée à gauche */
+.gallery-previous {
+    left: 20px;
+}
+
+/* Flèche suivante placée à droite */
+.gallery-next {
+    right: 20px;
+}
+/* Compteur d'images affiché en bas au centre de la galerie */
+.gallery-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+
+    z-index: 1;
+}

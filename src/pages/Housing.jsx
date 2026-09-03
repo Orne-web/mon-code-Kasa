@@ -1,3 +1,6 @@
+// Importe les styles de la fiche logement
+import "./Housing.css";
+
 // Importe le composant Gallery
 import Gallery from "../components/Gallery";
 
@@ -31,7 +34,7 @@ useEffect(() => {
 
     // return définit ce que la page doit afficher
     return (
-        <main>
+        <main className="housing-page">
             {logement && (
                 
                 <>
