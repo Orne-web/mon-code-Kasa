@@ -26,10 +26,10 @@ function Collapse({ title, children }) {
                 </span>
 
                 <button
-                    className="collapse-button"
-                    onClick={toggleCollapse}
-                >
-                    ▲
+                   className={`collapse-button ${isOpen ? "open" : ""}`}
+                      onClick={toggleCollapse}
+                       >
+                             ⌃
                 </button>
             </div>
 

@@ -103,12 +103,24 @@ useEffect(() => {
 </div>
      </div>
     
-                   {/* Bloc Description */}
-          <div className="housing-collapses">
-             <Collapse title="Description">
-             <p>{logement.description}</p>
-             </Collapse>
- </div>
+             {/* Blocs Description et Équipements */}
+<div className="housing-collapses">
+
+<Collapse title="Description">
+    <p>{logement.description}</p>
+</Collapse>
+
+<Collapse title="Équipements">
+    <ul>
+        {logement.equipments.map((equipment) => (
+            <li key={equipment}>
+                {equipment}
+            </li>
+        ))}
+    </ul>
+</Collapse>
+
+</div>
                  </>
             )}
 

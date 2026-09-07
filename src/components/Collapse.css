@@ -38,3 +38,35 @@
     font-size: 24px;
     cursor: pointer;
 }
+/* Rotation du chevron lorsque le Collapse est ouvert */
+.collapse-button {
+    transition: transform 0.3s ease;
+}
+
+.collapse-button.open {
+    transform: rotate(180deg);
+}
+/* Contenu visible lorsque le Collapse est ouvert */
+.collapse-content {
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-color: #F6F6F6;
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 143%;
+}
+
+/* Supprime les marges automatiques du paragraphe */
+.collapse-content p {
+    margin: 0;
+}
+
+/* Style de la liste des équipements */
+.collapse-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

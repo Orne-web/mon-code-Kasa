@@ -115,5 +115,9 @@
 }
 /* Conteneur des blocs Description et Équipements */
 .housing-collapses {
+    display: flex;
+    justify-content: space-between;
+    gap: 76px;
     margin-top: 20px;
+    margin-bottom: 40px;
 }

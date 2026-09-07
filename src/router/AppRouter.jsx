@@ -1,6 +1,9 @@
- // Importe le Header commun aux différentes pages
+// Importe le footer commun aux différentes pages 
+import Footer from "../components/Footer";
+
+// Importe le Header commun aux différentes pages
 import Header from "../components/Header";
- 
+
  // Importe les outils nécessaires pour gérer les routes
 import { BrowserRouter, Routes, Route } from "react-router";
 
@@ -32,7 +35,7 @@ function AppRouter() {
                 <Route path="*" element={<Error />} />
 
             </Routes>
-
+            <Footer />
         </BrowserRouter>
     );
 }
