@@ -1,0 +1,48 @@
+/* Conteneur principal de la page 404 */
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Grand numéro 404 */
+.error-code {
+    width: 597px;
+    height: 240px;
+    margin: 50px 0 0;
+    color: #FF6060;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 240px;
+    line-height: 143%;
+    letter-spacing: 0;
+    text-align: center;
+}
+/* Message affiché sous le numéro 404 */
+.error-message {
+    width: 872px;
+    height: 51px;
+    margin: 80px 0 0;
+    color: #FF6060;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 143%;
+    letter-spacing: 0;
+    text-align: center;
+}
+/* Lien permettant de retourner à la page d'accueil */
+.error-link {
+    width: 284px;
+    height: 26px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    color: #000000;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 143%;
+    letter-spacing: 0;
+    text-align: center;
+    text-decoration: underline;
+}

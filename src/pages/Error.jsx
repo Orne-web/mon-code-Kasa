@@ -1,13 +1,26 @@
-// Composant React correspondant à la page d'erreur 404
-function Error() {
+import { Link } from "react-router";
+import "./Error.css";
+import "./Error.css";
 
-    // return définit ce que la page doit afficher
+function Error() {
     return (
-        <main>
-            <h1>404 - Page introuvable</h1>
+        <main className="error-page">
+
+            {/* Code de l'erreur */}
+            <h1 className="error-code">
+                404
+            </h1>
+            {/* Message d'erreur */}
+            <p className="error-message">
+                 Oups! La page que vous demandez n'existe pas.
+            </p>
+            {/* Lien permettant de retourner à la page d'accueil */}
+            <Link to="/" className="error-link">
+               Retourner sur la page d’accueil
+            </Link>
+
         </main>
     );
 }
 
-// Permet d'utiliser le composant Error ailleurs dans l'application
 export default Error;
