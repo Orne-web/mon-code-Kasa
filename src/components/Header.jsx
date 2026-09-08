@@ -1,5 +1,5 @@
 // Importe Link pour naviguer sans recharger la page
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 import logo from "../assets/logo.svg";
 
@@ -20,13 +20,10 @@ function Header() {
 
            <nav className="header-nav">
 
-                {/* Navigation vers la page d'accueil */}
-                <Link to="/">Accueil</Link>
+                <NavLink to="/">Accueil</NavLink>
+                <NavLink to="/about">A Propos</NavLink>
 
-                {/* Navigation vers la page À propos */}
-                <Link to="/about">À propos</Link>
-
-            </nav>
+           </nav>
 
         </header>
     );

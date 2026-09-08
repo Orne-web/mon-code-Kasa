@@ -22,6 +22,10 @@
     display: flex;
     gap: 57px;
 }
+ /* Souligne le lien correspondant à la page actuelle */
+.header-nav a.active {
+    text-decoration: underline;
+}
 
 /* Style des liens de navigation */
 .header-nav a {

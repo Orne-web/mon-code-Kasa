@@ -1,0 +1,41 @@
+/* Conteneur principal de la page À propos */
+.about-page {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* Bannière de la page À propos */
+.about-banner {
+    width: 1240px;
+    height: 223px;
+    margin-top: 23px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/* Image de la bannière */
+.about-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Conteneur des Collapse de la page À propos */
+.about-collapses {
+    width: 1023px;
+    margin: 38px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* Espace entre le dernier Collapse et le Footer */
+    margin-bottom: 40px;
+}
+
+/* Barre des Collapse uniquement sur la page À propos */
+.about-collapses .collapse-header {
+    width: 1023px;
+    height: 40px;
+    padding: 10px 20px 10px 15px;
+    border-radius: 5px;
+    background-color: #FF6060;
+}
