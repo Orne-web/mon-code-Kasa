@@ -29,3 +29,42 @@
 
     color: white;
 }
+         /* version mobile de l'app */
+
+/* Version mobile du Footer */
+@media (max-width: 768px) {
+
+    .footer {
+        /* Espace entre la dernière carte et le Footer */
+        margin-top: 20px;
+
+        /* Footer moins haut sur mobile */
+        height: 120px;
+    }
+
+    /* Version mobile du Footer */
+@media (max-width: 768px) {
+
+    .footer {
+        margin-top: 30px;
+        height: 120px;
+    }
+
+    /* Logo plus petit sur mobile */
+    .footer-logo {
+        width: 80px;
+        height: auto;
+    }
+
+    
+    /* Texte du Footer sur mobile */
+.footer-text {
+    width: 135px;
+    margin-top: 15px;
+    font-size: 10px;
+    line-height: 143%;
+    text-align: center;
+}
+    
+}
+}

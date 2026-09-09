@@ -59,3 +59,35 @@
     /* Recadre l'image sans la déformer */
     object-fit: cover;
 }
+                 /* version mobile de l'app*/
+/* Version mobile de la bannière */
+ @media (max-width: 768px) {
+
+    .banner {
+        /* 335px sur un écran Figma de 375px = 20px de marge de chaque côté */
+        width: calc(100% - 40px);
+        height: 111px;
+        margin: 27px auto 0;
+        border-radius: 10px;
+    }
+    /* Texte de la bannière sur mobile */
+.banner-title {
+    width: 225px;
+
+    /* Autorise le texte à passer sur deux lignes */
+    white-space: normal;
+
+    font-size: 24px;
+    line-height: 100%;
+
+    /* Position indiquée dans Figma */
+    top: 31px;
+    left: 16px;
+
+    /* Annule le centrage utilisé sur desktop */
+    transform: none;
+
+    text-align: left;
+}
+}
+

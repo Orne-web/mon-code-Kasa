@@ -58,3 +58,30 @@
     text-decoration: none;
     color: inherit;
 }
+   /*version mobile de l'app */
+
+/* Version mobile des cartes logements */
+@media (max-width: 768px) {
+
+    .card {
+        width: 100%;
+        height: 255px;
+    }
+    @media (max-width: 768px) {
+
+        .card {
+            width: 100%;
+            height: 255px;
+        }
+    
+        /* Les logements s'affichent sur une seule colonne en mobile */
+        .housing-grid {
+            width: calc(100% - 40px);
+            margin: 22px auto 0;
+            padding: 0;
+    
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
+    }
+}
