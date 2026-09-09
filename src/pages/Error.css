@@ -46,3 +46,42 @@
     text-align: center;
     text-decoration: underline;
 }
+         /* version mobile (responsive ) de l'app */
+   
+@media (max-width: 768px) {
+
+    /* Grand numéro 404 */
+    .error-code {
+        width: 190px;
+        height: 99px;
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 143%;
+        text-align: center;
+    }
+    
+     /* Message d'erreur sur mobile */
+    .error-message {
+    width: 250px;
+    height: 52px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 143%;
+    text-align: center;
+    margin-top: 113px;
+    }
+
+      /* Lien de retour à l'accueil sur mobile */
+    .error-link {
+    width: 221px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 143%;
+    text-decoration: underline;
+    margin-top: 113px;
+    margin-bottom: 113px;
+    
+    }
+
+}
