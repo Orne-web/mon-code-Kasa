@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import { render, screen } from "@testing-library/react";
 import { describe, test, expect } from "vitest";
-import Collapse from "./Collapse";
+import Collapse from "../src/components/Collapse";
 
 
 describe("Collapse", () => {

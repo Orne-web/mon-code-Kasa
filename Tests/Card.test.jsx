@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import { describe, test, expect } from "vitest";
-import Card from "./Card";
+import Card from "../src/components/Card";
 
 describe("Card", () => {
     test("affiche correctement le titre et l'image du logement", () => {
