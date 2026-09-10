@@ -10,7 +10,7 @@ import Gallery from "../components/Gallery";
 import { useEffect, useState } from "react";
 
 // Importe useParams pour récupérer l'identifiant présent dans l'URL
-import { useParams } from "react-router";
+import { Navigate, useParams } from "react-router";
 
 // Composant React correspondant à la page d'un logement
 function Housing() {
@@ -19,20 +19,38 @@ function Housing() {
 
    // Stocke les informations du logement sélectionné
 const [logement, setLogement] = useState(null);
+   // Indique si une erreur est survenue lors du chargement du logement
+const [error, setError] = useState(false);
 
 // Récupère le logement correspondant à l'id présent dans l'URL
 useEffect(() => {
     fetch(`http://localhost:8080/api/properties/${id}`)
-        .then((response) => response.json())
+        .then((response) => {
+        // Vérifie si la réponse de l'API est correcte
+        if (!response.ok) {
+            throw new Error("Logement introuvable");
+        }
+
+        // Transforme la réponse reçue en données JavaScript
+        return response.json();
+        })
         .then((data) => {
             setLogement(data);
         })
         .catch((error) => {
+            // Indique qu'une erreur est survenue
+            setError(true);
+        
             console.error("Erreur lors du chargement du logement :", error);
         });
 }, [id]);
 
          console.log(logement);
+
+         // Redirige vers la page 404 si le logement n'existe pas
+         if (error) {
+        return <Navigate to="/404" replace />;
+       }
 
     // return définit ce que la page doit afficher
     return (

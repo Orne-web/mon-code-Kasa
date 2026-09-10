@@ -31,6 +31,9 @@ function AppRouter() {
                 {/* Route dynamique pour afficher un logement selon son id */}
                 <Route path="/logement/:id" element={<Housing />} />
 
+                {/* Route de la page d'erreur 404 */}
+                <Route path="/404" element={<Error />} />
+
                 {/* Route utilisée si aucune autre route ne correspond */}
                 <Route path="*" element={<Error />} />
 
@@ -39,35 +42,6 @@ function AppRouter() {
         </BrowserRouter>
     );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
