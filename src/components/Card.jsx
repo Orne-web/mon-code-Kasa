@@ -4,8 +4,6 @@ import { Link } from "react-router";
 // Importe les styles de la carte
 import "./Card.css";
 
-// Importe les styles de la carte
-import "./Card.css";
 
  // Composant réutilisable représentant une carte de logement
 // Le composant reçoit le titre du logement grâce aux props
